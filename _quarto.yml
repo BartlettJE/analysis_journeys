@@ -8,24 +8,25 @@ execute:
 book:
   title: Data Analysis Journeys
   subtitle: ''
-  author: James Bartlett
+  author:
+  - orcid: 0000-0002-4191-5245
+    name:
+      family: Bartlett
+      given: James
+  - orcid: 0000-0002-5688-9537
+    name:
+      family: Toivo
+      given: Wilhelmiina
   doi: ''
   license: CC-BY
-  description: Book Description
+  description: Data skills tasks to practice wrangling, visualising, and analysing data.
   cover-image: images/logos/logo.png
   image: images/logos/logo.png
   favicon: images/logos/logo.png
   cookie-consent: false
-  google-analytics: ''
+  google-analytics: 'G-6NP3MF25W3'
   page-navigation: true
   search: true
-  downloads:
-  - pdf
-  - epub
-  sharing:
-  - twitter
-  - facebook
-  - linkedin
   sidebar:
     title: ''
     logo: ''
@@ -41,14 +42,18 @@ book:
     header: ''
     footer: ''
   margin-header: ''
-  page-footer: CC-BY (2025) James Bartlett
+  page-footer: CC-BY-4.0 (2025) Bartlett & Toivo
   chapters:
   - index.qmd
-  - instructions.qmd
+  - part: "Wrangling"
+    chapters:
+      - Bartlett-analysis-journey-wrangle.qmd
+  - part: "Analysis"
+    chapters:
+      - Evans-analysis-journey-analysis.qmd
   appendices:
-  - webexercises.qmd
   - references.qmd
-bibliography: include/references.bib
+bibliography: include/book.bib
 csl: include/apa.csl
 format:
   html:
