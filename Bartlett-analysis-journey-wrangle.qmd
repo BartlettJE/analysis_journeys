@@ -12,12 +12,7 @@ demog <- read_csv("data/Bartlett_demographics.csv")
 trials <- read_csv("data/Bartlett_trials.csv")
 ```
 
-
-Welcome to the first data analysis journey. We have designed these chapters as a bridge between the structured learning in the core chapters and your assessments. We present you with a new data set, show you what the end product should look like, and see if you can apply your data wrangling, visualisation, and/or analysis skills to get there. 
-
-As you gain independence, this is the crucial skill. Data analysis is all about seeing the data you have available to you and identifying what the end product needs to be to apply your visualisation and analysis techniques. You can then mentally (or physically) create a checklist of tasks to work backwards to get there. There might be a lot of trial and error as you try one thing, it does not quite work, so you go back and try something else. If you get stuck though, we have a range of hints and task lists you can unhide, then the solution to check your attempts against. 
-
-In this first data analysis journey, we focus on data wrangling to apply all the skills you developed from Chapter 1 to Chapter 6. 
+In this chapter, we assume you have covered data wrangling tasks such as selecting variables, joining datasets, creating and modifying variables, and calculating summary statistics. There are then some basic visualisation opportunities to create things like histograms.  
 
 ## Task preparation
 
@@ -37,13 +32,13 @@ Response time tasks like this are incredibly common in psychology and cognitive 
 
 Before we can get started, you need to organise your files and project for the task, so your working directory is in order.
 
-1. In your folder for research methods and the book `ResearchMethods1_2/Quant_Fundamentals`, create a new folder for the data analysis journey called `Journey_01_wrangling`. Within `Journey_01_wrangling`, create two new folders called `data` and `figures`.
+1. You can create a folder for the data analysis journeys book and a new sub-folder for this chapter, something like: `analysis_journeys`, create a new folder for this chapter called something like `Bartlett_wrangling`. Within `Bartlett_wrangling`, create two new folders called `data` and `figures`.
 
-2. Create an R Project for `Journey_01_wrangling` as an existing directory for your chapter folder. This should now be your working directory.
+2. Create an R Project for `Bartlett_wrangling` as an existing directory for your chapter folder. This should now be your working directory.
 
-3. Create a new R Markdown document and give it a sensible title describing the chapter, such as `Analysis Journey 1 - Data Wrangling`. Delete everything below line 10 so you have a blank file to work with and save the file in your `Journey_01_wrangling` folder. 
+3. Create a new R Markdown/Quarto document and give it a sensible title describing the chapter, such as `Bartlett et al. (2022): Data Wrangling`. Delete everything below line 10 so you have a blank file to work with and save the file in your `Bartlett_wrangling` folder. 
 
-4. We are working with data separated into two files. The links are data file one ([Bartlett_demographics.csv](data/Bartlett_demographics.csv)) and data file two ([Bartlett_trials.csv](data/Bartlett_trials.csv)). Right click the links and select "save link as", or clicking the links will save the files to your Downloads. Make sure that both files are saved as ".csv". Save or copy the file to your `data/` folder within `Journey_01_wrangling`.
+4. We are working with data separated into two files. The links are data file one ([Bartlett_demographics.csv](data/Bartlett_demographics.csv)) and data file two ([Bartlett_trials.csv](data/Bartlett_trials.csv)). Right click the links and select "save link as", or clicking the links will save the files to your Downloads. Make sure that both files are saved as ".csv". Save or copy the file to your `data/` folder within `Bartlett_wrangling`.
 
 You are now ready to start working on the task! 
 
@@ -110,7 +105,7 @@ The columns (variables) we have in the data set are:
 | technical_issues | `r typeof(demog$technical_issues)`| Did you experience any technical issues? Yes or No |
 | FTND_1 to FTND_6 | `r typeof(demog$FTND_1)`| Six items of the Fagerstrom Test for Nicotine Dependence |
 
-In `trials`, we then have the participant ID (`participant_private_id`) and trial-by-trial information from the software Gorilla (an online experiment service). This is probably the biggest data set you have come across so far as we have hundreds of trials per participant. 
+In `trials`, we then have the participant ID (`participant_private_id`) and trial-by-trial information from the software Gorilla (an online experiment service).
 
 ```{r echo=FALSE}
 glimpse(trials)
@@ -170,7 +165,6 @@ demog_tidy <- demog_tidy %>%
              by = "participant_private_id")
 ```
 
-
 For this kind of data, we recommend wrangling each file first, before joining them together. Starting with the demographics file, there are a few wrangling steps before the data are ready to summarise. We are going to show you a preview of the starting data set and the end product we are aiming for.
 
 ::: {.panel-tabset}
@@ -228,7 +222,7 @@ These are all the steps we applied to create the wrangled data object:
 
 9. Create a new variable `FTND_sum` by taking the sum of the six items `FTND_1` to `FTND_6` per participant. 
 
-For some advice, think of everything we covered in Chapters 4 to 6. How could you complete these steps as efficiently as possible? Could you string together functions using pipes, or do you need some intermediary objects? If it's easier for you to complete steps with longer but accurate code, there is nothing wrong with that. You recognise ways to make your code more efficient over time. 
+For some advice, think of everything you have covered so far in your course book. How could you complete these steps as efficiently as possible? Could you string together functions using pipes, or do you need some intermediary objects? If it's easier for you to complete steps with longer but accurate code, there is nothing wrong with that. You recognise ways to make your code more efficient over time. 
 
 :::
 
@@ -330,7 +324,7 @@ glimpse(RT_wide)
 
 Before we give you a task list, try and switch between the raw data and the three steps we took for wrangling the data. Make a list of all the differences you can see across the steps. 
 
-This part of the data wrangling is quite difficult if you are unfamiliar with dealing with response time tasks as you need to know what the end product should look like to work with later. Essentially, we want the median response time per participant per condition (across trial type and soa). There are rows we do not need, variables to create, and data to restructure. So, it takes all your wrangling skills you have learnt so far. 
+This part of the data wrangling is quite difficult if you are unfamiliar with dealing with response time tasks as you need to know what the end product should look like to work with later. Essentially, we want the median response time per participant per condition (across trial type and SOA). There are rows we do not need, variables to create, and data to restructure. So, it takes all your wrangling skills you have learnt so far. 
 
 1. In step 1, how many observations do we have compared to the raw data? Knowing the design is important here, so look at the columns `correct`, `screen_name`, and `trial_type`. What function might reduce the number of observations like this?  
 
@@ -376,7 +370,7 @@ These are all the steps we applied to create the wrangled data object:
 
 3. Summarise the data to create a new variable `median_RT` by calculating the median `reaction_time`. 
 
-4. Create a new variable called `condition` by combining the names of the `trial_type` and `soa` columns. Hint: this is a new concept, so try this `paste0(trial_type, soa)`. There are a few ways of dealing with this problem, but we are trying to avoid turning `soa` into variable names, as R does not like having variable names start with or be completely numbers.
+4. Create a new variable called `condition` by combining the names of the `trial_type` and `soa` columns. Hint: this is maybe a new concept, so try this `paste0(trial_type, soa)`. There are a few ways of dealing with this problem, but we are trying to avoid turning `soa` into variable names, as R does not like having variable names start with or be completely numbers.
 
 5. Ungroup to avoid the groups carrying over into future objects. 
 
@@ -493,11 +487,11 @@ full_data <- demog_tidy %>%
 write_csv(full_data, "data/Bartlett_full_data.csv")
 ```
 
-That is all the wrangling complete! Hopefully, this reinforces the role of reproducibility and data skills. If you did this in other software like Excel, you might not have a paper trail of all the steps. Like this, you have the full code to apply all the wrangling steps from raw data which you can run every time you need to, and edit it if you found a mistake or wanted to add something new. You can also come back to the file later to add more code (such as after Chapter 7 to plot more of the data, or Chapter 13 for some inferential statistics).
+That is all the wrangling complete! Hopefully, this reinforces the role of reproducibility and data skills. If you did this in other software like Excel, you might not have a paper trail of all the steps. Like this, you have the full code to apply all the wrangling steps from raw data which you can run every time you need to, and edit it if you found a mistake or wanted to add something new. You can also come back to the file later to add more code, such as creating more sophisticated plots or calculating inferential statistics.
 
 To finish the journey, we have some practice tasks for summarising and visualising the data. The whole purpose of @bartlett_no_2022 was to compare daily and non-daily smokers, so we will explore some of the key variables. 
 
-All of the questions are based on the final `full_data` object. If your answers differ, check the wrangling steps above. If you are really struggling to identify the difference, or you just wanted to complete these tasks, you can download a spreadsheet version of `full_data` here: [Bartlett_full_data.csv](data/Bartlett_full_data.csv).
+All of the questions are based on the final `full_data` object. If your answers differ, check the wrangling steps above. If you are really struggling to identify the difference, or you just wanted to complete these tasks, you can download `full_data` here: [Bartlett_full_data.csv](data/Bartlett_full_data.csv).
 
 ### Demographics
 
@@ -644,12 +638,12 @@ full_data %>%
 ```
 :::
 
-If you are currently completing this after Chapter 6, we have not covered visualising continuous data or inferential statistics yet. Try coming back to these tasks to compare these measures when you have finished Chapter 7 for more advanced visualisation and Chapter 13 for factorial ANOVA. 
-
 A difference score of 0 means no bias towards smoking or non-smoking images. So, you can see the paper did not find either group showed much attentional bias towards smoking images nor much difference between the groups, hence why it was published in the *Journal of Trial and Error*. 
+
+Depending on the courses you have completed so far, you might notice we average over the trials and calculate difference scores which is not always optimal. If you are familiar with mixed effects models, you might want to try analysing the data at the trial level. 
 
 ## Conclusion
 
 Well done! Hopefully you recognised how far your skills have come to be able to do this independently, regardless of how many hints you needed. 
 
-These are real skills people use in research. If you are curious, @bartlett_no_2022 shared their code as a reproducible manuscrupt, so you can see all the wrangling steps they completed by looking at [this file on the Open Science Framework](https://osf.io/xpgt3){target="_blank"}. We did not include all of them here as there are concepts like outliers we had not covered by Chapter 6. 
+These are real skills people use in research. If you are curious, @bartlett_no_2022 shared their code as a reproducible manuscrupt, so you can see all the wrangling steps they completed by looking at [this file on the Open Science Framework](https://osf.io/xpgt3){target="_blank"}. 

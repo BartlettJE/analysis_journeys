@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="description" content="Book Description">
-<title>1&nbsp; Analysis Journey 1: Data Wrangling – Data Analysis Journeys</title>
+<meta name="description" content="Data skills tasks to practice wrangling, visualising, and analysing data.">
+<title>1&nbsp; Bartlett et al.&nbsp;(2022): Attentional bias in smokers – Data Analysis Journeys</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -274,7 +274,7 @@ gtag('config', 'G-6NP3MF25W3', { 'anonymize_ip': true});
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Bartlett-analysis-journey-wrangle.html">Wrangling</a></li><li class="breadcrumb-item"><a href="./Bartlett-analysis-journey-wrangle.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bartlett et al.&nbsp;(2022): Attentional bias in smokers</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="journey-01-wrangling" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Analysis Journey 1: Data Wrangling</span></span></h1>
+<h1 class="title"><span id="journey-01-wrangling" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bartlett et al.&nbsp;(2022): Attentional bias in smokers</span></span></h1>
 </div>
 
 
@@ -288,9 +288,7 @@ gtag('config', 'G-6NP3MF25W3', { 'anonymize_ip': true});
   
 
 
-</header><p>Welcome to the first data analysis journey. We have designed these chapters as a bridge between the structured learning in the core chapters and your assessments. We present you with a new data set, show you what the end product should look like, and see if you can apply your data wrangling, visualisation, and/or analysis skills to get there.</p>
-<p>As you gain independence, this is the crucial skill. Data analysis is all about seeing the data you have available to you and identifying what the end product needs to be to apply your visualisation and analysis techniques. You can then mentally (or physically) create a checklist of tasks to work backwards to get there. There might be a lot of trial and error as you try one thing, it does not quite work, so you go back and try something else. If you get stuck though, we have a range of hints and task lists you can unhide, then the solution to check your attempts against.</p>
-<p>In this first data analysis journey, we focus on data wrangling to apply all the skills you developed from Chapter 1 to Chapter 6.</p>
+</header><p>In this chapter, we assume you have covered data wrangling tasks such as selecting variables, joining datasets, creating and modifying variables, and calculating summary statistics. There are then some basic visualisation opportunities to create things like histograms.</p>
 <section id="task-preparation" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="task-preparation">
 <span class="header-section-number">1.1</span> Task preparation</h2>
 <section id="introduction-to-the-data-set" class="level3" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="introduction-to-the-data-set">
@@ -306,10 +304,10 @@ gtag('config', 'G-6NP3MF25W3', { 'anonymize_ip': true});
 <span class="header-section-number">1.1.2</span> Organising your files and project for the task</h3>
 <p>Before we can get started, you need to organise your files and project for the task, so your working directory is in order.</p>
 <ol type="1">
-<li><p>In your folder for research methods and the book <code>ResearchMethods1_2/Quant_Fundamentals</code>, create a new folder for the data analysis journey called <code>Journey_01_wrangling</code>. Within <code>Journey_01_wrangling</code>, create two new folders called <code>data</code> and <code>figures</code>.</p></li>
-<li><p>Create an R Project for <code>Journey_01_wrangling</code> as an existing directory for your chapter folder. This should now be your working directory.</p></li>
-<li><p>Create a new R Markdown document and give it a sensible title describing the chapter, such as <code>Analysis Journey 1 - Data Wrangling</code>. Delete everything below line 10 so you have a blank file to work with and save the file in your <code>Journey_01_wrangling</code> folder.</p></li>
-<li><p>We are working with data separated into two files. The links are data file one (<a href="data/Bartlett_demographics.csv">Bartlett_demographics.csv</a>) and data file two (<a href="data/Bartlett_trials.csv">Bartlett_trials.csv</a>). Right click the links and select “save link as”, or clicking the links will save the files to your Downloads. Make sure that both files are saved as “.csv”. Save or copy the file to your <code>data/</code> folder within <code>Journey_01_wrangling</code>.</p></li>
+<li><p>You can create a folder for the data analysis journeys book and a new sub-folder for this chapter, something like: <code>analysis_journeys</code>, create a new folder for this chapter called something like <code>Bartlett_wrangling</code>. Within <code>Bartlett_wrangling</code>, create two new folders called <code>data</code> and <code>figures</code>.</p></li>
+<li><p>Create an R Project for <code>Bartlett_wrangling</code> as an existing directory for your chapter folder. This should now be your working directory.</p></li>
+<li><p>Create a new R Markdown/Quarto document and give it a sensible title describing the chapter, such as <code>Bartlett et al. (2022): Data Wrangling</code>. Delete everything below line 10 so you have a blank file to work with and save the file in your <code>Bartlett_wrangling</code> folder.</p></li>
+<li><p>We are working with data separated into two files. The links are data file one (<a href="data/Bartlett_demographics.csv">Bartlett_demographics.csv</a>) and data file two (<a href="data/Bartlett_trials.csv">Bartlett_trials.csv</a>). Right click the links and select “save link as”, or clicking the links will save the files to your Downloads. Make sure that both files are saved as “.csv”. Save or copy the file to your <code>data/</code> folder within <code>Bartlett_wrangling</code>.</p></li>
 </ol>
 <p>You are now ready to start working on the task!</p>
 </section></section><section id="overview" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="overview">
@@ -475,7 +473,7 @@ $ FTND_6                 &lt;dbl&gt; 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0
 </tr>
 </tbody>
 </table>
-<p>In <code>trials</code>, we then have the participant ID (<code>participant_private_id</code>) and trial-by-trial information from the software Gorilla (an online experiment service). This is probably the biggest data set you have come across so far as we have hundreds of trials per participant.</p>
+<p>In <code>trials</code>, we then have the participant ID (<code>participant_private_id</code>) and trial-by-trial information from the software Gorilla (an online experiment service).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 244,847
@@ -716,7 +714,7 @@ Show me the task list
 <li><p>Create a new variable <code>daily_smoker</code> by recoding an existing variable. The new variable should have two levels: “Daily Smoker” and “Non-daily Smoker”. In the process, convert <code>daily_smoker</code> to a factor (as we have distinct categories).</p></li>
 <li><p>Create a new variable <code>FTND_sum</code> by taking the sum of the six items <code>FTND_1</code> to <code>FTND_6</code> per participant.</p></li>
 </ol>
-<p>For some advice, think of everything we covered in Chapters 4 to 6. How could you complete these steps as efficiently as possible? Could you string together functions using pipes, or do you need some intermediary objects? If it’s easier for you to complete steps with longer but accurate code, there is nothing wrong with that. You recognise ways to make your code more efficient over time.</p>
+<p>For some advice, think of everything you have covered so far in your course book. How could you complete these steps as efficiently as possible? Could you string together functions using pipes, or do you need some intermediary objects? If it’s easier for you to complete steps with longer but accurate code, there is nothing wrong with that. You recognise ways to make your code more efficient over time.</p>
 </div>
 </div>
 </div>
@@ -863,7 +861,7 @@ Try this
 </div>
 <div class="callout-body-container callout-body">
 <p>Before we give you a task list, try and switch between the raw data and the three steps we took for wrangling the data. Make a list of all the differences you can see across the steps.</p>
-<p>This part of the data wrangling is quite difficult if you are unfamiliar with dealing with response time tasks as you need to know what the end product should look like to work with later. Essentially, we want the median response time per participant per condition (across trial type and soa). There are rows we do not need, variables to create, and data to restructure. So, it takes all your wrangling skills you have learnt so far.</p>
+<p>This part of the data wrangling is quite difficult if you are unfamiliar with dealing with response time tasks as you need to know what the end product should look like to work with later. Essentially, we want the median response time per participant per condition (across trial type and SOA). There are rows we do not need, variables to create, and data to restructure. So, it takes all your wrangling skills you have learnt so far.</p>
 <ol type="1">
 <li><p>In step 1, how many observations do we have compared to the raw data? Knowing the design is important here, so look at the columns <code>correct</code>, <code>screen_name</code>, and <code>trial_type</code>. What function might reduce the number of observations like this?</p></li>
 <li><p>In step 2, how many observations do we have compared to step 1? How many observations do we have per participant ID? What new variables do we have and how could you make them? Hint: for <code>condition</code>, we have not covered this, so look up a function called <code><a href="https://rdrr.io/r/base/paste.html">paste0()</a></code>.</p></li>
@@ -920,7 +918,7 @@ Show me the step 2 task list
 <li><p>Create an object <code>average_trials</code> using the <code>trials_tidy</code> object from step 1.</p></li>
 <li><p>Group observations by three variables: <code>participant_private_id</code>, <code>soa</code>, and <code>trial_type</code>.</p></li>
 <li><p>Summarise the data to create a new variable <code>median_RT</code> by calculating the median <code>reaction_time</code>.</p></li>
-<li><p>Create a new variable called <code>condition</code> by combining the names of the <code>trial_type</code> and <code>soa</code> columns. Hint: this is a new concept, so try this <code>paste0(trial_type, soa)</code>. There are a few ways of dealing with this problem, but we are trying to avoid turning <code>soa</code> into variable names, as R does not like having variable names start with or be completely numbers.</p></li>
+<li><p>Create a new variable called <code>condition</code> by combining the names of the <code>trial_type</code> and <code>soa</code> columns. Hint: this is maybe a new concept, so try this <code>paste0(trial_type, soa)</code>. There are a few ways of dealing with this problem, but we are trying to avoid turning <code>soa</code> into variable names, as R does not like having variable names start with or be completely numbers.</p></li>
 <li><p>Ungroup to avoid the groups carrying over into future objects.</p></li>
 </ol>
 </div>
@@ -1049,9 +1047,9 @@ Show me the solution
 </div>
 </section></section><section id="summarisingvisualising-your-data" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="summarisingvisualising-your-data">
 <span class="header-section-number">1.6</span> Summarising/visualising your data</h2>
-<p>That is all the wrangling complete! Hopefully, this reinforces the role of reproducibility and data skills. If you did this in other software like Excel, you might not have a paper trail of all the steps. Like this, you have the full code to apply all the wrangling steps from raw data which you can run every time you need to, and edit it if you found a mistake or wanted to add something new. You can also come back to the file later to add more code (such as after Chapter 7 to plot more of the data, or Chapter 13 for some inferential statistics).</p>
+<p>That is all the wrangling complete! Hopefully, this reinforces the role of reproducibility and data skills. If you did this in other software like Excel, you might not have a paper trail of all the steps. Like this, you have the full code to apply all the wrangling steps from raw data which you can run every time you need to, and edit it if you found a mistake or wanted to add something new. You can also come back to the file later to add more code, such as creating more sophisticated plots or calculating inferential statistics.</p>
 <p>To finish the journey, we have some practice tasks for summarising and visualising the data. The whole purpose of <span class="citation" data-cites="bartlett_no_2022">Bartlett et al. (<a href="references.html#ref-bartlett_no_2022" role="doc-biblioref">2022</a>)</span> was to compare daily and non-daily smokers, so we will explore some of the key variables.</p>
-<p>All of the questions are based on the final <code>full_data</code> object. If your answers differ, check the wrangling steps above. If you are really struggling to identify the difference, or you just wanted to complete these tasks, you can download a spreadsheet version of <code>full_data</code> here: <a href="data/Bartlett_full_data.csv">Bartlett_full_data.csv</a>.</p>
+<p>All of the questions are based on the final <code>full_data</code> object. If your answers differ, check the wrangling steps above. If you are really struggling to identify the difference, or you just wanted to complete these tasks, you can download <code>full_data</code> here: <a href="data/Bartlett_full_data.csv">Bartlett_full_data.csv</a>.</p>
 <section id="demographics" class="level3" data-number="1.6.1"><h3 data-number="1.6.1" class="anchored" data-anchor-id="demographics">
 <span class="header-section-number">1.6.1</span> Demographics</h3>
 <ol type="1">
@@ -1422,12 +1420,12 @@ Show me the solution
 </div>
 </div>
 </div>
-<p>If you are currently completing this after Chapter 6, we have not covered visualising continuous data or inferential statistics yet. Try coming back to these tasks to compare these measures when you have finished Chapter 7 for more advanced visualisation and Chapter 13 for factorial ANOVA.</p>
 <p>A difference score of 0 means no bias towards smoking or non-smoking images. So, you can see the paper did not find either group showed much attentional bias towards smoking images nor much difference between the groups, hence why it was published in the <em>Journal of Trial and Error</em>.</p>
+<p>Depending on the courses you have completed so far, you might notice we average over the trials and calculate difference scores which is not always optimal. If you are familiar with mixed effects models, you might want to try analysing the data at the trial level.</p>
 </section></section><section id="conclusion" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="conclusion">
 <span class="header-section-number">1.7</span> Conclusion</h2>
 <p>Well done! Hopefully you recognised how far your skills have come to be able to do this independently, regardless of how many hints you needed.</p>
-<p>These are real skills people use in research. If you are curious, <span class="citation" data-cites="bartlett_no_2022">Bartlett et al. (<a href="references.html#ref-bartlett_no_2022" role="doc-biblioref">2022</a>)</span> shared their code as a reproducible manuscrupt, so you can see all the wrangling steps they completed by looking at <a href="https://osf.io/xpgt3" target="_blank">this file on the Open Science Framework</a>. We did not include all of them here as there are concepts like outliers we had not covered by Chapter 6.</p>
+<p>These are real skills people use in research. If you are curious, <span class="citation" data-cites="bartlett_no_2022">Bartlett et al. (<a href="references.html#ref-bartlett_no_2022" role="doc-biblioref">2022</a>)</span> shared their code as a reproducible manuscrupt, so you can see all the wrangling steps they completed by looking at <a href="https://osf.io/xpgt3" target="_blank">this file on the Open Science Framework</a>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">

@@ -1,10 +1,6 @@
 # Evans et al. (2023): Canine-assisted interventions for wellbeing {#journey-02-wrangling}
 
-Welcome to the second data analysis journey. We have designed these chapters as a bridge between the structured learning in the core chapters and your assessments. We present you with a new data set, show you what the end product should look like, and see if you can apply your data wrangling, visualisation, and/or analysis skills to get there. 
-
-As you gain independence, this is the crucial skill. Data analysis is all about seeing the data you have available to you and identifying what the end product needs to be to apply your visualisation and analysis techniques. You can then mentally (or physically) create a checklist of tasks to work backwards to get there. There might be a lot of trial and error as you try one thing, it does not quite work, so you go back and try something else. If you get stuck though, we have a range of hints and task lists you can unhide, then the solution to check your attempts against. 
-
-In this second data analysis journey, we focus on inferential statistics after some data wrangling to apply all the skills you developed from Chapter 1 to Chapter 9. 
+In this data analysis journey, we focus on inferential statistics after some data wrangling to apply the whole pipeline of skills that you are developing. We expect you can apply basic data wrangling tasks like creating and modifying variables, calculate descriptive statistics, create plots such as bar plots and boxplots, and apply simple linear regression techniques. 
 
 ## Task preparation
 
@@ -34,13 +30,13 @@ They measured 9 outcomes before and after the intervention including social conn
 
 Before we can get started, you need to organise your files and project for the task, so your working directory is in order.
 
-1. In your folder for research methods and the book `ResearchMethods1_2/Quant_Fundamentals`, create a new folder for the data analysis journey called `Journey_02_regression`. Within `Journey_02_regression`, create two new folders called `data` and `figures`.
+1. You can create a folder for the data analysis journeys book and a new sub-folder for this chapter, something like: `analysis_journeys`, create a new folder for this chapter called something like `Evans_analysis`. Within `Evans_analysis`, create two new folders called `data` and `figures`.
 
-2. Create an R Project for `Journey_02_regression` as an existing directory for your chapter folder. This should now be your working directory.
+2. Create an R Project for `Evans_analysis` as an existing directory for your chapter folder. This should now be your working directory.
 
-3. Create a new R Markdown document and give it a sensible title describing the chapter, such as `Analysis Journey 2 - Simple Linear Regression`. Delete everything below line 10 so you have a blank file to work with and save the file in your `Journey_02_regression` folder. 
+3. Create a new R Markdown or Quarto document and give it a sensible title describing the chapter, such as `Evans et al. (2023): Simple Linear Regression`. Delete everything below line 10 so you have a blank file to work with and save the file in your `Evans_analysis` folder. 
 
-4. We are working with a new data set, so please save the following data file: [Evans_2023_raw.csv](data/Evans_2023_raw.csv). Right click the link and select "save link as", or clicking the link will save the files to your Downloads. Make sure that you save the file as ".csv". Save or copy the file to your `data/` folder within `Journey_02_regression`.
+4. We are working with a new data set, so please save the following data file: [Evans_2023_raw.csv](data/Evans_2023_raw.csv). Right click the link and select "save link as", or clicking the link will save the files to your Downloads. Make sure that you save the file as ".csv". Save or copy the file to your `data/` folder within `Evans_analysis`.
 
 You are now ready to start working on the task! 
 
@@ -363,7 +359,7 @@ evans_wide %>%
 ::: {.callout-caution collapse="true"} 
 #### Show me the solution
 
-Weirdly, this reproduces the standard deviations from Table 1, but not the means. 
+Weirdly, this reproduces the standard deviations from Table 1, but not the means... 
 
 ```{r}
 evans_wide %>% 
@@ -392,7 +388,7 @@ evans_wide %>%
 ```
 :::
 
-4. This is not part of their article, but one interesting question might be how many people have a pet at home (`Live_Pets`) against how frequently they use the BARK program (`Consumer_BARK`). Try and recreate the following bar plot to visualise this as close as possible. We have intentionally used some features we have not covered in the data visualisation chapters to get you problem solving. For one hint though, we used option D for the viridis colour scheme. 
+4. This is not part of their article, but one interesting question might be how many people have a pet at home (`Live_Pets`) against how frequently they use the BARK program (`Consumer_BARK`). Try and recreate the following bar plot to visualise this as close as possible. We have intentionally used some features you may not have covered in the data visualisation chapters to get you problem solving. For one hint though, we used option D for the viridis colour scheme. 
 
 ```{r echo=FALSE}
 evans_wide %>% 
@@ -520,7 +516,7 @@ evans_wide %>%
 ```
 :::
 
-8. Try and recreate the violin-boxplot to visualise loneliness. Hint: remember how to align the different elements from Chapter 7. 
+8. Try and recreate the violin-boxplot to visualise loneliness. Hint: remember how to align the different elements.
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE}
 # specify as an object, so we only change it in one place
@@ -590,9 +586,9 @@ evans_wide %>%
 
 ## Analysing 
 
-Finally, we turn to analysis for inferential statistics. In @evans_repurposing_2023, they organise the analyses from @binfet_importance_2022 into three hypotheses. You have not covered all the skills in Research Methods 1 to reproduce their analyses exactly, so we will work around an adapted set based on what we currently expect of you. 
+Finally, we turn to analysis for inferential statistics. In @evans_repurposing_2023, they organise the analyses from @binfet_importance_2022 into three hypotheses. You may not have developed all the analysis skills yet to reproduce their analyses exactly, so we will work around an adapted set. 
 
-We present each analysis as an overview so you can think about what techniques from Chapters 8 and 9 would address it, give you instructions on what analysis we have in mind if you need guidance, then present the solution. We focus on one outcome per hypothesis, but once you are confident you are applying and interpreting the appropriate techniques, why not try the other outcomes yourself? 
+We present each analysis as an overview so you can think about what techniques would address it, give you instructions on what analysis we have in mind if you need guidance, then present the solution. We focus on one outcome per hypothesis, but once you are confident you are applying and interpreting the appropriate techniques, why not try the other outcomes yourself? 
 
 ### Hypothesis 1
 
@@ -600,7 +596,7 @@ We present each analysis as an overview so you can think about what techniques f
 
 ::: {.callout-tip}
 #### Try this
-There are two ways you could approach this. Either as the whole sample, or like @evans_repurposing_2023 present to focus on each group separately. Think about what techniques from Chapters 8 and 9 would let you test the hypothesis that each treatment group will decrease stress at post-test compared to pre-test.
+There are two ways you could approach this. Either as the whole sample, or like @evans_repurposing_2023 present to focus on each group separately. Think about what techniques would let you test the hypothesis that each treatment group will decrease stress at post-test compared to pre-test.
 :::
 
 ::: {.callout-note collapse="true"} 
@@ -608,13 +604,13 @@ There are two ways you could approach this. Either as the whole sample, or like 
 
 For the solution below, we are focusing on the whole sample to test whether everyone decreased stress in post-test, but you could approach it by separating the data into the three groups and then testing for the difference per group. 
 
-To test whether an outcome decreases between conditions in the same participants, we need a model suitable for a within-subjects design. In Chapter 9, we covered in [the bonus section](#09-bonus) how to test the difference in conditions either through a paired samples-test or linear model with fixed intercept on the difference score. 
+To test whether an outcome decreases between conditions in the same participants, we need a model suitable for a within-subjects design. You might have covered how to test the difference in conditions either through a paired samples-test or linear model with fixed intercept on the difference score. 
 
 1. Calculate the difference between stress pre- and post-test. 
 
 2. Fit a linear model on the difference score with a fixed intercept and no predictor. 
 
-3. Look at the intercept, is it positive or negative? If you calculated pre-test minus post-test, you would be looking for a postive difference as we expect lower stress at post-test. For hypothesis testing, is the *p*-value lower than alpha? 
+3. Look at the intercept, is it positive or negative? If you calculated pre-test minus post-test, you would be looking for a positive difference as we expect lower stress at post-test. For hypothesis testing, is the *p*-value lower than alpha? 
 
 4. What is the effect size? How much did stress change from pre-test to post-test? What is the confidence interval around the effect size? 
 
@@ -623,7 +619,7 @@ To test whether an outcome decreases between conditions in the same participants
 ::: {.callout-caution collapse="true"} 
 #### Show me the solution
 
-In the code below, we first calculate a difference score by substracting stress post-test from stress pre-test. 
+In the code below, we first calculate a difference score by subtracting stress post-test from stress pre-test. 
 
 We then fit a linear model on this difference score and add a fixed intercept as we have no predictor. 
 
@@ -648,7 +644,7 @@ confint(lm_stress)
 
 ::: {.callout-tip}
 #### Try this
-Think about what techniques from Chapters 8 and 9 would let you test the hypothesis that the direct and indirect groups both increase social connectedness at post-test compared to the control group. Think of how you could focus on two groups at a time per analysis. 
+Think about what techniques would let you test the hypothesis that the direct and indirect groups both increase social connectedness at post-test compared to the control group. Think of how you could focus on two groups at a time per analysis. 
 :::
 
 ::: {.callout-note collapse="true"} 
@@ -656,7 +652,7 @@ Think about what techniques from Chapters 8 and 9 would let you test the hypothe
 
 For the solution below, we apply two tests. We focus on the direct and control groups by filtering out indirect, then we focus on indirect and control by filtering out direct. 
 
-To test the difference between two groups on one outcome, we need a model suitable for a between-subjects design. In Chapter 9, we covered [linear regression with one categorical predictor](#09-categorical) how to test the difference in an outcome between two groups. 
+To test the difference between two groups on one outcome, we need a model suitable for a between-subjects design. You might have covered linear regression with one categorical predictor for how to test the difference in an outcome between two groups. 
 
 1. Fit a linear model on the outcome social connectedness post-test with a categorical predictor of group. You will need to fit two models, one where you filter out the indirect group and one where you filter out the direct group. 
 
@@ -695,7 +691,7 @@ summary(lm_indirect)
 confint(lm_indirect)
 ```
 
-In @evans_repurposing_2023, the direct vs control comparison is significant, but they approached the analysis differently using a technique you will not learn until Research Methods 2. They control for pre-test scores by using it as an additional predictor, but you have not learnt about multiple regression yet. 
+In @evans_repurposing_2023, the direct vs control comparison is significant, but they approached the analysis differently. They control for pre-test scores by using it as an additional predictor (known as a covariate) in an ANCOVA procedure. 
 :::
 
 ### Hypothesis 3
@@ -704,7 +700,7 @@ In @evans_repurposing_2023, the direct vs control comparison is significant, but
 
 ::: {.callout-tip}
 #### Try this
-Think about what techniques from Chapters 8 and 9 would let you test the hypothesis that the direct group decreases loneliness at post-test compared to the indirect group.
+Think about what techniques would let you test the hypothesis that the direct group decreases loneliness at post-test compared to the indirect group.
 :::
 
 ::: {.callout-note collapse="true"} 
@@ -712,7 +708,7 @@ Think about what techniques from Chapters 8 and 9 would let you test the hypothe
 
 For this analysis, we focus on the final combination of groups, this time ignoring the control group.
 
-To test the difference between two groups on one outcome, we need a model suitable for a between-subjects design. In Chapter 9, we covered [linear regression with one categorical predictor](#09-categorical) how to test the difference in an outcome between two groups. 
+To test the difference between two groups on one outcome, we need a model suitable for a between-subjects design. You will have covered linear regression with one categorical predictor for how to test the difference in an outcome between two groups. 
 
 1. Fit a linear model on the outcome loneliness post-test with a categorical predictor of group. Filter the data to just focus on the direct and indirect contact groups. 
 
@@ -739,11 +735,9 @@ summary(lm_contact)
 confint(lm_contact)
 ```
 
-Like hypothesis 2, @evans_repurposing_2023 report the direct vs indirect comparison as significant, but they approached the analysis differently using a technique you will not learn until Research Methods 2. They control for pre-test scores by using it as an additional predictor, but you have not learnt about multiple regression yet. 
+Like hypothesis 2, @evans_repurposing_2023 report the direct vs indirect comparison as significant, but they approached the analysis differently . They control for pre-test scores by using it as an additional predictor within an ANCOVA type model. 
 :::
 
 ## Conclusion
 
-Well done! Hopefully you recognised how far your skills have come to be able to do this independently, regardless of how many hints you needed. We are really starting to pile the skills up you have learnt so far, from simply using R Markdown files, to wrangling data, to visualising data, to finally applying modelling techniques for your inferential statistics. 
-
-If you are curious, you can read @evans_repurposing_2023 to see how they walk through wrangling and analysing the data. Some of the techniques we do not cover in Research Methods 1, but they have some great features like highlighting common student mistakes. 
+Well done! Hopefully you recognised how far your skills have come to be able to do this independently, regardless of how many hints you needed. If you are curious, you can read @evans_repurposing_2023 to see how they walk through wrangling and analysing the data, and they have some great features like highlighting common student mistakes. 

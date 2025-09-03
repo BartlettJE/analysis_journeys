@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="description" content="Book Description">
-<title>2&nbsp; Analysis Journey 2: Simple Linear Regression – Data Analysis Journeys</title>
+<meta name="description" content="Data skills tasks to practice wrangling, visualising, and analysing data.">
+<title>2&nbsp; Evans et al.&nbsp;(2023): Canine-assisted interventions for wellbeing – Data Analysis Journeys</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -293,7 +293,7 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Evans-analysis-journey-analysis.html">Analysis</a></li><li class="breadcrumb-item"><a href="./Evans-analysis-journey-analysis.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evans et al.&nbsp;(2023): Canine-assisted interventions for wellbeing</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="journey-02-wrangling" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Analysis Journey 2: Simple Linear Regression</span></span></h1>
+<h1 class="title"><span id="journey-02-wrangling" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evans et al.&nbsp;(2023): Canine-assisted interventions for wellbeing</span></span></h1>
 </div>
 
 
@@ -307,9 +307,7 @@ window.Quarto = {
   
 
 
-</header><p>Welcome to the second data analysis journey. We have designed these chapters as a bridge between the structured learning in the core chapters and your assessments. We present you with a new data set, show you what the end product should look like, and see if you can apply your data wrangling, visualisation, and/or analysis skills to get there.</p>
-<p>As you gain independence, this is the crucial skill. Data analysis is all about seeing the data you have available to you and identifying what the end product needs to be to apply your visualisation and analysis techniques. You can then mentally (or physically) create a checklist of tasks to work backwards to get there. There might be a lot of trial and error as you try one thing, it does not quite work, so you go back and try something else. If you get stuck though, we have a range of hints and task lists you can unhide, then the solution to check your attempts against.</p>
-<p>In this second data analysis journey, we focus on inferential statistics after some data wrangling to apply all the skills you developed from Chapter 1 to Chapter 9.</p>
+</header><p>In this data analysis journey, we focus on inferential statistics after some data wrangling to apply the whole pipeline of skills that you are developing. We expect you can apply basic data wrangling tasks like creating and modifying variables, calculate descriptive statistics, create plots such as bar plots and boxplots, and apply simple linear regression techniques.</p>
 <section id="task-preparation" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="task-preparation">
 <span class="header-section-number">2.1</span> Task preparation</h2>
 <section id="introduction-to-the-data-set" class="level3" data-number="2.1.1"><h3 data-number="2.1.1" class="anchored" data-anchor-id="introduction-to-the-data-set">
@@ -333,10 +331,10 @@ window.Quarto = {
 <span class="header-section-number">2.1.2</span> Organising your files and project for the task</h3>
 <p>Before we can get started, you need to organise your files and project for the task, so your working directory is in order.</p>
 <ol type="1">
-<li><p>In your folder for research methods and the book <code>ResearchMethods1_2/Quant_Fundamentals</code>, create a new folder for the data analysis journey called <code>Journey_02_regression</code>. Within <code>Journey_02_regression</code>, create two new folders called <code>data</code> and <code>figures</code>.</p></li>
-<li><p>Create an R Project for <code>Journey_02_regression</code> as an existing directory for your chapter folder. This should now be your working directory.</p></li>
-<li><p>Create a new R Markdown document and give it a sensible title describing the chapter, such as <code>Analysis Journey 2 - Simple Linear Regression</code>. Delete everything below line 10 so you have a blank file to work with and save the file in your <code>Journey_02_regression</code> folder.</p></li>
-<li><p>We are working with a new data set, so please save the following data file: <a href="data/Evans_2023_raw.csv">Evans_2023_raw.csv</a>. Right click the link and select “save link as”, or clicking the link will save the files to your Downloads. Make sure that you save the file as “.csv”. Save or copy the file to your <code>data/</code> folder within <code>Journey_02_regression</code>.</p></li>
+<li><p>You can create a folder for the data analysis journeys book and a new sub-folder for this chapter, something like: <code>analysis_journeys</code>, create a new folder for this chapter called something like <code>Evans_analysis</code>. Within <code>Evans_analysis</code>, create two new folders called <code>data</code> and <code>figures</code>.</p></li>
+<li><p>Create an R Project for <code>Evans_analysis</code> as an existing directory for your chapter folder. This should now be your working directory.</p></li>
+<li><p>Create a new R Markdown or Quarto document and give it a sensible title describing the chapter, such as <code>Evans et al. (2023): Simple Linear Regression</code>. Delete everything below line 10 so you have a blank file to work with and save the file in your <code>Evans_analysis</code> folder.</p></li>
+<li><p>We are working with a new data set, so please save the following data file: <a href="data/Evans_2023_raw.csv">Evans_2023_raw.csv</a>. Right click the link and select “save link as”, or clicking the link will save the files to your Downloads. Make sure that you save the file as “.csv”. Save or copy the file to your <code>data/</code> folder within <code>Evans_analysis</code>.</p></li>
 </ol>
 <p>You are now ready to start working on the task!</p>
 </section></section><section id="overview" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="overview">
@@ -799,7 +797,7 @@ Show me the solution
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Weirdly, this reproduces the standard deviations from Table 1, but not the means.</p>
+<p>Weirdly, this reproduces the standard deviations from Table 1, but not the means…</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>evans_wide <span class="sc">%&gt;%</span> </span>
 <span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">group_by</span>(GroupAssignment) <span class="sc">%&gt;%</span> </span>
@@ -926,7 +924,7 @@ Show me the solution
 </div>
 </div>
 <ol start="4" type="1">
-<li>This is not part of their article, but one interesting question might be how many people have a pet at home (<code>Live_Pets</code>) against how frequently they use the BARK program (<code>Consumer_BARK</code>). Try and recreate the following bar plot to visualise this as close as possible. We have intentionally used some features we have not covered in the data visualisation chapters to get you problem solving. For one hint though, we used option D for the viridis colour scheme.</li>
+<li>This is not part of their article, but one interesting question might be how many people have a pet at home (<code>Live_Pets</code>) against how frequently they use the BARK program (<code>Consumer_BARK</code>). Try and recreate the following bar plot to visualise this as close as possible. We have intentionally used some features you may not have covered in the data visualisation chapters to get you problem solving. For one hint though, we used option D for the viridis colour scheme.</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -978,12 +976,12 @@ Show me the solution
 <p>If you calculate the mean and standard deviation of each variable per group, answer the following questions:</p>
 <ul>
 <li><p>Which group has the lowest post-test stress value? <select class="webex-select"><option value="blank"></option>
-<option value="">Indirect</option>
-<option value="answer">Direct</option>
-<option value="">Control</option></select></p></li>
-<li><p>Which group has the lowest post-test loneliness value? <select class="webex-select"><option value="blank"></option>
 <option value="answer">Direct</option>
 <option value="">Control</option>
+<option value="">Indirect</option></select></p></li>
+<li><p>Which group has the lowest post-test loneliness value? <select class="webex-select"><option value="blank"></option>
+<option value="">Control</option>
+<option value="answer">Direct</option>
 <option value="">Indirect</option></select></p></li>
 <li><p>Which group has the lowest post-test social connectedness value? <select class="webex-select"><option value="blank"></option>
 <option value="">Direct</option>
@@ -1145,10 +1143,10 @@ the `.groups` argument.</code></pre>
 </div>
 <ol start="6" type="1">
 <li>Create a scatterplot of the relationship between post-test social connectedness and loneliness. The relationship between the two variables is <select class="webex-select"><option value="blank"></option>
-<option value="answer">negative</option>
-<option value="">positive</option></select>, meaning that as social connectedness increases, we expect loneliness to <select class="webex-select"><option value="blank"></option>
-<option value="">increase</option>
-<option value="answer">decrease</option></select>.</li>
+<option value="">positive</option>
+<option value="answer">negative</option></select>, meaning that as social connectedness increases, we expect loneliness to <select class="webex-select"><option value="blank"></option>
+<option value="answer">decrease</option>
+<option value="">increase</option></select>.</li>
 </ol>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
@@ -1226,7 +1224,7 @@ Show me the solution
 </div>
 </div>
 <ol start="8" type="1">
-<li>Try and recreate the violin-boxplot to visualise loneliness. Hint: remember how to align the different elements from Chapter 7.</li>
+<li>Try and recreate the violin-boxplot to visualise loneliness. Hint: remember how to align the different elements.</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -1283,8 +1281,8 @@ Show me the solution
 </div>
 </section></section><section id="analysing" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="analysing">
 <span class="header-section-number">2.5</span> Analysing</h2>
-<p>Finally, we turn to analysis for inferential statistics. In <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span>, they organise the analyses from <span class="citation" data-cites="binfet_importance_2022">Binfet et al. (<a href="references.html#ref-binfet_importance_2022" role="doc-biblioref">2022</a>)</span> into three hypotheses. You have not covered all the skills in Research Methods 1 to reproduce their analyses exactly, so we will work around an adapted set based on what we currently expect of you.</p>
-<p>We present each analysis as an overview so you can think about what techniques from Chapters 8 and 9 would address it, give you instructions on what analysis we have in mind if you need guidance, then present the solution. We focus on one outcome per hypothesis, but once you are confident you are applying and interpreting the appropriate techniques, why not try the other outcomes yourself?</p>
+<p>Finally, we turn to analysis for inferential statistics. In <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span>, they organise the analyses from <span class="citation" data-cites="binfet_importance_2022">Binfet et al. (<a href="references.html#ref-binfet_importance_2022" role="doc-biblioref">2022</a>)</span> into three hypotheses. You may not have developed all the analysis skills yet to reproduce their analyses exactly, so we will work around an adapted set.</p>
+<p>We present each analysis as an overview so you can think about what techniques would address it, give you instructions on what analysis we have in mind if you need guidance, then present the solution. We focus on one outcome per hypothesis, but once you are confident you are applying and interpreting the appropriate techniques, why not try the other outcomes yourself?</p>
 <section id="hypothesis-1" class="level3" data-number="2.5.1"><h3 data-number="2.5.1" class="anchored" data-anchor-id="hypothesis-1">
 <span class="header-section-number">2.5.1</span> Hypothesis 1</h3>
 <ol start="9" type="1">
@@ -1300,7 +1298,7 @@ Try this
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>There are two ways you could approach this. Either as the whole sample, or like <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span> present to focus on each group separately. Think about what techniques from Chapters 8 and 9 would let you test the hypothesis that each treatment group will decrease stress at post-test compared to pre-test.</p>
+<p>There are two ways you could approach this. Either as the whole sample, or like <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span> present to focus on each group separately. Think about what techniques would let you test the hypothesis that each treatment group will decrease stress at post-test compared to pre-test.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1316,11 +1314,11 @@ Show me the task list
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>For the solution below, we are focusing on the whole sample to test whether everyone decreased stress in post-test, but you could approach it by separating the data into the three groups and then testing for the difference per group.</p>
-<p>To test whether an outcome decreases between conditions in the same participants, we need a model suitable for a within-subjects design. In Chapter 9, we covered in <a href="#09-bonus">the bonus section</a> how to test the difference in conditions either through a paired samples-test or linear model with fixed intercept on the difference score.</p>
+<p>To test whether an outcome decreases between conditions in the same participants, we need a model suitable for a within-subjects design. You might have covered how to test the difference in conditions either through a paired samples-test or linear model with fixed intercept on the difference score.</p>
 <ol type="1">
 <li><p>Calculate the difference between stress pre- and post-test.</p></li>
 <li><p>Fit a linear model on the difference score with a fixed intercept and no predictor.</p></li>
-<li><p>Look at the intercept, is it positive or negative? If you calculated pre-test minus post-test, you would be looking for a postive difference as we expect lower stress at post-test. For hypothesis testing, is the <em>p</em>-value lower than alpha?</p></li>
+<li><p>Look at the intercept, is it positive or negative? If you calculated pre-test minus post-test, you would be looking for a positive difference as we expect lower stress at post-test. For hypothesis testing, is the <em>p</em>-value lower than alpha?</p></li>
 <li><p>What is the effect size? How much did stress change from pre-test to post-test? What is the confidence interval around the effect size?</p></li>
 </ol>
 </div>
@@ -1338,7 +1336,7 @@ Show me the solution
 </div>
 <div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In the code below, we first calculate a difference score by substracting stress post-test from stress pre-test.</p>
+<p>In the code below, we first calculate a difference score by subtracting stress post-test from stress pre-test.</p>
 <p>We then fit a linear model on this difference score and add a fixed intercept as we have no predictor.</p>
 <p>Consistent with hypothesis 1, stress was lower at post-test compared to pre-test across all participants. On average, participants decreased their stress score by 0.83 points (<span class="math inline">\(b_0\)</span> = 0.83, 95% CI = [0.72, 0.95], <em>p</em> &lt; .001).</p>
 <div class="cell" data-layout-align="center">
@@ -1390,7 +1388,7 @@ Try this
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Think about what techniques from Chapters 8 and 9 would let you test the hypothesis that the direct and indirect groups both increase social connectedness at post-test compared to the control group. Think of how you could focus on two groups at a time per analysis.</p>
+<p>Think about what techniques would let you test the hypothesis that the direct and indirect groups both increase social connectedness at post-test compared to the control group. Think of how you could focus on two groups at a time per analysis.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1406,7 +1404,7 @@ Show me the task list
 <div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>For the solution below, we apply two tests. We focus on the direct and control groups by filtering out indirect, then we focus on indirect and control by filtering out direct.</p>
-<p>To test the difference between two groups on one outcome, we need a model suitable for a between-subjects design. In Chapter 9, we covered <a href="#09-categorical">linear regression with one categorical predictor</a> how to test the difference in an outcome between two groups.</p>
+<p>To test the difference between two groups on one outcome, we need a model suitable for a between-subjects design. You might have covered linear regression with one categorical predictor for how to test the difference in an outcome between two groups.</p>
 <ol type="1">
 <li><p>Fit a linear model on the outcome social connectedness post-test with a categorical predictor of group. You will need to fit two models, one where you filter out the indirect group and one where you filter out the direct group.</p></li>
 <li><p>Look at the intercept, what is the predicted value for the reference group? Look at the slope, what is the estimated change to the target group? For hypothesis 2, is the direct/indirect group higher on social connectedness compared to control? For hypothesis testing, is the <em>p</em>-value lower than alpha?</p></li>
@@ -1498,7 +1496,7 @@ F-statistic: 0.006398 on 1 and 187 DF,  p-value: 0.9363
 GroupAssignmentIndirect -0.2326772 0.2523439</code></pre>
 </div>
 </div>
-<p>In <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span>, the direct vs control comparison is significant, but they approached the analysis differently using a technique you will not learn until Research Methods 2. They control for pre-test scores by using it as an additional predictor, but you have not learnt about multiple regression yet.</p>
+<p>In <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span>, the direct vs control comparison is significant, but they approached the analysis differently. They control for pre-test scores by using it as an additional predictor (known as a covariate) in an ANCOVA procedure.</p>
 </div>
 </div>
 </div>
@@ -1517,7 +1515,7 @@ Try this
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Think about what techniques from Chapters 8 and 9 would let you test the hypothesis that the direct group decreases loneliness at post-test compared to the indirect group.</p>
+<p>Think about what techniques would let you test the hypothesis that the direct group decreases loneliness at post-test compared to the indirect group.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1533,7 +1531,7 @@ Show me the task list
 <div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>For this analysis, we focus on the final combination of groups, this time ignoring the control group.</p>
-<p>To test the difference between two groups on one outcome, we need a model suitable for a between-subjects design. In Chapter 9, we covered <a href="#09-categorical">linear regression with one categorical predictor</a> how to test the difference in an outcome between two groups.</p>
+<p>To test the difference between two groups on one outcome, we need a model suitable for a between-subjects design. You will have covered linear regression with one categorical predictor for how to test the difference in an outcome between two groups.</p>
 <ol type="1">
 <li><p>Fit a linear model on the outcome loneliness post-test with a categorical predictor of group. Filter the data to just focus on the direct and indirect contact groups.</p></li>
 <li><p>Look at the intercept, what is the predicted value for the reference group? Look at the slope, what is the estimated change to the target group? For hypothesis 3, is the direct group lower on loneliness compared to indirect? For hypothesis testing, is the <em>p</em>-value lower than alpha?</p></li>
@@ -1590,14 +1588,13 @@ F-statistic: 3.585 on 1 and 188 DF,  p-value: 0.05983
 GroupAssignmentIndirect -0.005898489 0.2879484</code></pre>
 </div>
 </div>
-<p>Like hypothesis 2, <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span> report the direct vs indirect comparison as significant, but they approached the analysis differently using a technique you will not learn until Research Methods 2. They control for pre-test scores by using it as an additional predictor, but you have not learnt about multiple regression yet.</p>
+<p>Like hypothesis 2, <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span> report the direct vs indirect comparison as significant, but they approached the analysis differently . They control for pre-test scores by using it as an additional predictor within an ANCOVA type model.</p>
 </div>
 </div>
 </div>
 </section></section><section id="conclusion" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="conclusion">
 <span class="header-section-number">2.6</span> Conclusion</h2>
-<p>Well done! Hopefully you recognised how far your skills have come to be able to do this independently, regardless of how many hints you needed. We are really starting to pile the skills up you have learnt so far, from simply using R Markdown files, to wrangling data, to visualising data, to finally applying modelling techniques for your inferential statistics.</p>
-<p>If you are curious, you can read <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span> to see how they walk through wrangling and analysing the data. Some of the techniques we do not cover in Research Methods 1, but they have some great features like highlighting common student mistakes.</p>
+<p>Well done! Hopefully you recognised how far your skills have come to be able to do this independently, regardless of how many hints you needed. If you are curious, you can read <span class="citation" data-cites="evans_repurposing_2023">Evans et al. (<a href="references.html#ref-evans_repurposing_2023" role="doc-biblioref">2023</a>)</span> to see how they walk through wrangling and analysing the data, and they have some great features like highlighting common student mistakes.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
