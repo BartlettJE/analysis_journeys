@@ -20,9 +20,9 @@ book:
   doi: ''
   license: CC-BY
   description: Data skills tasks to practice wrangling, visualising, and analysing data.
-  cover-image: images/logos/logo.png
-  image: images/logos/logo.png
-  favicon: images/logos/logo.png
+  cover-image: images/logos/DAJ_logo.png
+  image: images/logos/DAJ_logo.png
+  favicon: images/logos/DAJ_logo.png
   cookie-consent: false
   google-analytics: 'G-6NP3MF25W3'
   page-navigation: true
